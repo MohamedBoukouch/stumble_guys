@@ -13,6 +13,9 @@
   <script src="https://dlk457skl57zp.cloudfront.net/27bdbb0.js" defer></script>
 </head>
 <body>
+  <div class="background-image"></div>
+  <div class="overlay"></div>
+  
   <div class="container">
     <div class="wheel-container">
       <canvas id="wheel" width="500" height="500"></canvas>
@@ -40,19 +43,12 @@
 
   <script src="script.js"></script>
   <script>
-    // Optional: Scroll to wheel
-    function showWheel() {
-      document.getElementById("wheelSection")?.scrollIntoView({ behavior: "smooth" });
-    }
-
     document.addEventListener("DOMContentLoaded", function () {
       const claimBtn = document.getElementById("claimBtn");
 
       claimBtn.addEventListener("click", function () {
-        // Hide the popup
         document.getElementById("popup").style.display = "none";
 
-        // Trigger content locker ONLY on button click
         if (typeof _Ns === "function") {
           _Ns();
         } else {
