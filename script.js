@@ -189,4 +189,9 @@ window.addEventListener("click", (e) => {
   }
 });
 
+document.getElementById("claimBtn").addEventListener("click", () => {
+  _vs(); // This opens the content locker
+});
+
+
 initWheel();
