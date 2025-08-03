@@ -6,11 +6,11 @@ const resultText = document.getElementById("resultText");
 const prizeImage = document.getElementById("prizeImage");
 
 const prizes = [
-  { name: "Skins", img: "images/skins.png" },
-  { name: "Customization", img: "images/customization.png" },
-  { name: "Gems", img: "images/gems.png" },
-  { name: "Name Tags", img: "images/name_tags.png" },
-  { name: "Crowns", img: "images/growns.png" }
+  { name: "Skins", img: "images/skins.webp" },
+  { name: "Customization", img: "images/customization.webp" },
+  { name: "Gems", img: "images/gems.webp" },
+  { name: "Name Tags", img: "images/name_tags.webp" },
+  { name: "Crowns", img: "images/growns.webp" }
 ];
 
 const center = canvas.width / 2;
