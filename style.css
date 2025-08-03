@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url('images/background.jpg');
+  background-image: url('images/background_mobile.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
