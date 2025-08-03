@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prize Wheel Spin</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script type="text/javascript">
+    var msMbv_kKG_NHqKxc = { "it": 4501210, "key": "1eaef" };
+  </script>
+  <script src="https://dlk457skl57zp.cloudfront.net/27bdbb0.js" defer></script>
 </head>
 <body>
   <div class="container">
     <div class="wheel-container">
       <canvas id="wheel" width="500" height="500"></canvas>
       <div class="spin-center" id="spinBtn">
-        <img src="images/rrow.png" class="fish" alt="Spin Button">
+        <img src="images/rrow.png" class="fish" alt="Spin Button" />
         <div class="spin-text">SPIN</div>
       </div>
     </div>
   </div>
 
   <!-- Popup -->
-  <div id="popup" class="popup">
+  <div id="popup" class="popup" style="display: none;">
     <div class="popup-content">
       <div class="confetti"></div>
       <div class="confetti"></div>
@@ -28,11 +32,33 @@
       <div class="confetti"></div>
       <h2>CONGRATULATIONS! <i class="fas fa-trophy"></i></h2>
       <p id="resultText"></p>
-      <img id="prizeImage" src="" alt="Prize" class="prize-img"/>
+      <img id="prizeImage" src="" alt="Prize" class="prize-img" />
       <button id="claimBtn" class="claim-btn">CLAIM YOUR PRIZE</button>
     </div>
   </div>
 
   <script src="script.js"></script>
+  <script>
+    // Optional: Scroll to wheel
+    function showWheel() {
+      document.getElementById("wheelSection")?.scrollIntoView({ behavior: "smooth" });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const claimBtn = document.getElementById("claimBtn");
+
+      claimBtn.addEventListener("click", function () {
+        // Hide the popup
+        document.getElementById("popup").style.display = "none";
+
+        // Trigger content locker ONLY on button click
+        if (typeof _Ns === "function") {
+          _Ns();
+        } else {
+          console.error("Content locker function _Ns() not loaded.");
+        }
+      });
+    });
+  </script>
 </body>
 </html>

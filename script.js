@@ -190,10 +190,10 @@ function createConfetti() {
 }
 
 // Popup controls
-claimBtn.addEventListener("click", () => {
-  alert("Prize claimed successfully!");
-  popup.style.display = "none";
-});
+// claimBtn.addEventListener("click", () => {
+//   alert("Prize claimed successfully!");
+//   popup.style.display = "none";
+// });
 
 window.addEventListener("click", (e) => {
   if (e.target === popup) {
