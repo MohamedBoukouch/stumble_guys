@@ -1,41 +1,460 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Prize Wheel</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <script type="text/javascript">
-    var LRELy_NqU_bOSrOc = { "it": 4501210, "key": "1eaef" };
-  </script>
-  <script src="https://dfmpe7igjx4jo.cloudfront.net/df7b846.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MOD CLUB | Premium MOD Collection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #FF3E41;
+      --secondary: #1A1A1A;
+      --dark: #000000;
+      --light: #FFFFFF;
+      --accent: #FF9500;
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html, body {
+      background-color: var(--dark);
+      color: var(--light);
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background-color: #000;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      width: 100%;
+      padding: 30px 0;
+    }
+
+    .header img.logo {
+      height: 200px;
+      width: auto;
+      max-width: 100%;
+      margin-bottom: 15px;
+      object-fit: contain;
+    }
+
+    .header p {
+      font-size: 1rem;
+      color: #AAA;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .game-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .game-card {
+      background-color: var(--secondary);
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      overflow: hidden;
+      border: 2px solid transparent;
+    }
+
+    .game-card.active {
+      border: 2px solid var(--primary);
+      box-shadow: 0 10px 25px rgba(255, 62, 65, 0.5);
+    }
+
+    .game-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .game-title {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: var(--light);
+      font-weight: 700;
+    }
+
+    .game-description {
+      font-size: 0.95rem;
+      color: #CCC;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .game-features {
+      padding-left: 20px;
+      font-size: 0.9rem;
+      color: #BBB;
+      margin-bottom: 20px;
+      list-style-type: none;
+    }
+
+    .game-features li {
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .game-features li:before {
+      content: "•";
+      color: var(--accent);
+      font-size: 1.5rem;
+      position: absolute;
+      left: -15px;
+      top: -5px;
+    }
+
+    .download-btn {
+      display: block;
+      text-align: center;
+      background-color: var(--primary);
+      color: var(--light);
+      padding: 12px 0;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      width: 100%;
+    }
+
+    .download-btn:hover {
+      background-color: var(--accent);
+    }
+
+    .badge {
+      font-size: 0.8rem;
+      background-color: rgba(255, 62, 65, 0.2);
+      padding: 5px 12px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 15px;
+      color: var(--light);
+      border: 1px solid var(--primary);
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+      width: 100%;
+    }
+
+    .footer a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: var(--accent);
+    }
+
+    @media (min-width: 768px) {
+      .header img.logo {
+        height: 250px;
+        max-width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header img.logo {
+        height: 180px;
+        max-width: 95%;
+      }
+      
+      .game-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script>
+    function openBlockBlastLocker() {
+      const script1 = document.createElement('script');
+      script1.type = 'text/javascript';
+      script1.innerHTML = 'var osuQQ_shp_oQdmQc={"it":4501210,"key":"1eaef"};';
+      document.head.appendChild(script1);
+
+      const script2 = document.createElement('script');
+      script2.src = 'https://dlk457skl57zp.cloudfront.net/a804b82.js';
+      script2.onload = function () {
+        if (typeof _aj === 'function') _aj();
+      };
+      document.body.appendChild(script2);
+    }
+
+    function openMonopolyLocker() {
+      const script1 = document.createElement('script');
+      script1.type = 'text/javascript';
+      script1.innerHTML = 'var grROO_CAL_FPSVGc={"it":4502348,"key":"95296"};';
+      document.head.appendChild(script1);
+
+      const script2 = document.createElement('script');
+      script2.src = 'https://dfmpe7igjx4jo.cloudfront.net/bd56932.js';
+      script2.onload = function () {
+        if (typeof _gD === 'function') _gD();
+      };
+      document.body.appendChild(script2);
+    }
+
+    function openLevelDevilLocker() {
+      const script1 = document.createElement('script');
+      script1.type = 'text/javascript';
+      script1.innerHTML = 'var HWXGT_Dfb_RNkctc={"it":4507573,"key":"1d222"};';
+      document.head.appendChild(script1);
+
+      const script2 = document.createElement('script');
+      script2.src = 'https://dlk457skl57zp.cloudfront.net/014ba36.js';
+      script2.onload = function () {
+        if (typeof _bu === 'function') _bu();
+      };
+      document.body.appendChild(script2);
+    }
+
+    function openBaseball9Locker() {
+      const script1 = document.createElement('script');
+      script1.type = 'text/javascript';
+      script1.innerHTML = 'var oqZbQ_wRE_nPBUSc={"it":4510955,"key":"ad99e"};';
+      document.head.appendChild(script1);
+
+      const script2 = document.createElement('script');
+      script2.src = 'https://dlk457skl57zp.cloudfront.net/4f2a245.js';
+      script2.onload = function () {
+        if (typeof _cZ === 'function') _cZ();
+      };
+      document.body.appendChild(script2);
+    }
+
+    function openCarXLocker() {
+      const script1 = document.createElement('script');
+      script1.type = 'text/javascript';
+      script1.innerHTML = 'var cNRhK_bHn_LxEoZc={"it":4514246,"key":"e1fa4"};';
+      document.head.appendChild(script1);
+
+      const script2 = document.createElement('script');
+      script2.src = 'https://dfmpe7igjx4jo.cloudfront.net/78ff39e.js';
+      script2.onload = function () {
+        if (typeof _cn === 'function') _cn();
+      };
+      document.body.appendChild(script2);
+    }
+
+    function openBrawlStarsLocker() {
+      const script1 = document.createElement('script');
+      script1.type = 'text/javascript';
+      script1.innerHTML = 'var ifyol_LuA_JKuYDc={"it":4515160,"key":"9a5c3"};';
+      document.head.appendChild(script1);
+
+      const script2 = document.createElement('script');
+      script2.src = 'https://dlk457skl57zp.cloudfront.net/172b5c2.js';
+      script2.onload = function () {
+        if (typeof _cW === 'function') _cW();
+      };
+      document.body.appendChild(script2);
+    }
+
+    function openGTAVLocker() {
+      const script1 = document.createElement('script');
+      script1.type = 'text/javascript';
+      script1.innerHTML = 'var oKSFT_cjf_uUvshc={"it":4526677,"key":"95a8b"};';
+      document.head.appendChild(script1);
+
+      const script2 = document.createElement('script');
+      script2.src = 'https://dlk457skl57zp.cloudfront.net/65627cb.js';
+      script2.onload = function () {
+        if (typeof _om === 'function') _om();
+      };
+      document.body.appendChild(script2);
+    }
+    
+   
+    function openNarutoLocker() {
+      const script1 = document.createElement('script');
+      script1.type = 'text/javascript';
+      script1.innerHTML = 'var mLECN_Inq_pIzEcc={"it":4537546,"key":"ea785"};';
+      document.head.appendChild(script1);
+
+      const script2 = document.createElement('script');
+      script2.src = 'https://dfmpe7igjx4jo.cloudfront.net/50dd3a2.js';
+      script2.onload = function () {
+        if (typeof _om === 'function') _om();
+      };
+      document.body.appendChild(script2);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const gameCards = document.querySelectorAll('.game-card');
+      
+      gameCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+          if (e.target.classList.contains('download-btn')) return;
+          this.classList.toggle('active');
+        });
+      });
+    });
+  </script>
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4773683864883917&host=ca-host-pub-1556223355139109" crossorigin="anonymous"></script>
+
+<!-- data-ad-client=ca-pub-4773683864883917 -->
 </head>
 <body>
-  <div class="wheel-container">
-    <canvas id="wheel" width="500" height="500"></canvas>
-    <div class="spin-center" id="spinBtn">
-      <img src="images/rrow.webp" alt="Spin Button">
-      <div class="spin-text">SPIN</div>
+  <div class="header">
+    <img src="https://i.ibb.co/qMVqhrbZ/Blue-and-White-Modern-Social-Club-Logo1-upscaled.png" alt="MOD CLUB Logo" class="logo">
+    <p>Premium unlocked games with all features available</p>
+  </div>
+
+  <div class="game-container">
+    <!-- Block Blast -->
+    <div class="game-card">
+      <img src="https://i.ibb.co/YFwXpZ6x/Ft-We-Vv3a-AAAZXg-S-upscaled.jpg" alt="Block Blast Game" class="game-image">
+      <div class="game-title">Block Blast MOD</div>
+      <div class="badge">🔥 50K+ Downloads · ✅ Safe & Verified</div>
+      <div class="game-description">Enjoy unlimited power-ups, no ads, and all levels unlocked in the MOD version.</div>
+      <ul class="game-features">
+        <li>All levels unlocked</li>
+        <li>Unlimited power-ups</li>
+        <li>No ads</li>
+      </ul>
+      <a href="javascript:void(0);" class="download-btn" onclick="openBlockBlastLocker()">DOWNLOAD</a>
+    </div>
+
+    <!-- Monopoly GO -->
+    <div class="game-card">
+      <img src="https://i.ibb.co/PZDR497M/Monopoly-Key-Art.jpg" alt="Monopoly GO" class="game-image">
+      <div class="game-title">Monopoly GO MOD</div>
+      <div class="badge">🔥 100K+ Downloads · ✅ Trusted Source</div>
+      <div class="game-description">Unlock all boards, unlimited dice rolls, and no ads in this special MOD.</div>
+      <ul class="game-features">
+        <li>Unlimited Dice Rolls</li>
+        <li>All Boards Unlocked</li>
+        <li>No annoying ads</li>
+      </ul>
+      <a href="javascript:void(0);" class="download-btn" onclick="openMonopolyLocker()">DOWNLOAD</a>
+    </div>
+
+    <!-- Level Devil -->
+    <div class="game-card">
+      <img src="https://i.ibb.co/0RDNV2TF/maxresdefault.jpg" alt="Level Devil Game" class="game-image">
+      <div class="game-title">Level Devil</div>
+      <div class="badge">🔥 Trending Now · ✅ New Release</div>
+      <div class="game-description">Play the most challenging platformer with brutal level design and hidden traps.</div>
+      <ul class="game-features">
+        <li>Insane difficulty levels</li>
+        <li>Precision-based platforming</li>
+        <li>No ads</li>
+      </ul>
+      <a href="javascript:void(0);" class="download-btn" onclick="openLevelDevilLocker()">DOWNLOAD</a>
+    </div>
+
+    <!-- Baseball 9 MOD -->
+    <div class="game-card">
+      <img src="https://i.ibb.co/DgPQHq5k/baseball-9-pc-full-version.jpg" alt="baseball-9-pc-full-version" class="game-image">
+      <div class="game-title">Baseball 9 MOD</div>
+      <div class="badge">🔥 70K+ Downloads · ✅ MOD Unlocked</div>
+      <div class="game-description">Experience the most realistic baseball gameplay with MOD features enabled for maximum fun.</div>
+      <ul class="game-features">
+        <li>Unlimited Coins & Gems</li>
+        <li>All players unlocked</li>
+        <li>No ads</li>
+      </ul>
+      <a href="javascript:void(0);" class="download-btn" onclick="openBaseball9Locker()">DOWNLOAD</a>
+    </div>
+
+    <!-- CarX Drift Racing MOD -->
+    <div class="game-card">
+      <img src="https://i.ibb.co/DDN9r11L/8068.jpg" alt="CarX street MOD" class="game-image">
+      <div class="game-title">CarX street MOD</div>
+      <div class="badge">🔥 80K+ Downloads · ✅ Drifting Unlocked</div>
+      <div class="game-description">Master the art of drifting with unlimited features, custom cars, and stunning tracks unlocked.</div>
+      <ul class="game-features">
+        <li>All Cars Unlocked</li>
+        <li>Unlimited Money</li>
+        <li>Realistic Drift Physics</li>
+      </ul>
+      <a href="javascript:void(0);" class="download-btn" onclick="openCarXLocker()">DOWNLOAD</a>
+    </div>
+
+        <!-- Naruto Shippuden: Ultimate Ninja Storm 4 (Free Premium) -->
+    <div class="game-card">
+      <img src="https://i.ibb.co/1cwgHYw/Naruto-Shippuden-Ultimate-Ninja-Storm-4-Cover.jpg" alt="Naruto Shippuden Ultimate Ninja Storm 4" class="game-image">
+      <div class="game-title">Naruto Shippuden: Ultimate Ninja Storm 4</div>
+      <div class="badge">🎮 Premium Edition · 💯 Free Download</div>
+      <div class="game-description">The full premium fighting game HD graphics—completely free!</div>
+      <ul class="game-features">
+        <li>All characters & DLCs unlocked</li>
+        <li>High-quality 60FPS gameplay</li>
+        <li>No ads or restrictions</li>
+      </ul>
+   <a href="javascript:void(0);" class="download-btn" onclick="openNarutoLocker()">DOWNLOAD</a>    
+    </div>
+    
+    <!-- Brawl Stars MOD -->
+    <div class="game-card">
+      <img src="https://i.ibb.co/zypwcGj/When-Did-Brawl-Stars-Come-Out-A-Look-Back-at-Its-Release-and-Evolution-upscaled.jpg" alt="Brawl Stars MOD" class="game-image">
+      <div class="game-title">Brawl Stars MOD</div>
+      <div class="badge">🔥 200K+ Downloads · ✅ Verified MOD</div>
+      <div class="game-description">Unlock all brawlers, skins, and unlimited gems in this premium MOD version.</div>
+      <ul class="game-features">
+        <li>All Brawlers Unlocked</li>
+        <li>Unlimited Gems & Coins</li>
+        <li>Exclusive Skins</li>
+      </ul><br>
+      <a href="javascript:void(0);" class="download-btn" onclick="openBrawlStarsLocker()">DOWNLOAD</a>
+    </div>
+    
+    <!-- Grand Theft Auto V -->
+    <div class="game-card">
+      <img src="https://i.ibb.co/rrVz8vZ/710-NOo-Ula-YL.jpg" alt="GTA V" class="game-image">
+      <div class="game-title">Grand Theft Auto V</div>
+      <div class="badge">⭐ Official Version · 🏆 Game of the Year</div>
+      <div class="game-description">Desirable Quality Graphics, Delightful Storyline, Extensive Map, Multiplayer Mode</div>
+      <ul class="game-features">
+        <li>Stunning HD Graphics</li>
+        <li>Massive Open World</li>
+        <li>Engaging Storyline</li>
+        <li>Online Multiplayer</li>
+      </ul>
+      <a href="javascript:void(0);" class="download-btn" onclick="openGTAVLocker()">DOWNLOAD</a>
     </div>
   </div>
 
-  <div id="popup" class="popup">
-    <div class="popup-content">
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <h2>CONGRATULATIONS! <i class="fas fa-trophy"></i></h2>
-      <p id="resultText"></p>
-      <img id="prizeImage" src="" alt="Prize" class="prize-img">
-      <p class="offer-note">Complete one offer to claim your prize!</p>
-      <button id="claimBtn" class="claim-btn">CLAIM YOUR PRIZE</button>
-    </div>
+  <div class="footer">
+    Need help? Contact us at <a href="mailto:support@modclub.site">support@modclub.site</a>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
